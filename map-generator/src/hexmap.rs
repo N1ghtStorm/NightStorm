@@ -1,14 +1,15 @@
-
+use rand::Rng;
 
 pub struct HexMap {
     pub map: Vec<Vec<Option<Hex>>>,
+    
 }
 
 impl HexMap {
-    pub fn create_random_map(width: usize, height: usize) -> Self {
+    pub fn create_random_map(width: usize, height: usize, number_of_clusters: u8) -> Self {
         let mut map = vec![vec![None; width]; height];
-
-
+        // let clusters = vec![];
+    
         HexMap {
             map
         }
@@ -42,5 +43,12 @@ pub enum LandShape {
 }
 
 pub struct Cluster {
+    pub hex_number: usize,
+    pub surface: Surface,
+}
 
+impl Cluster {
+    pub fn create_random_cluster(hex_number: usize) -> Self {
+        todo!();
+    }
 }
