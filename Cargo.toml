@@ -1,0 +1,9 @@
+[workspace]
+members = [
+    "map-generator",
+]
+
+resolver = "2"
+
+[profile.release]
+panic = 'unwind'
